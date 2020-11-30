@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>じゃんけんアプリ</title>
+</head>
+
+<body>
+    じゃんけんアプリ<br>
+
+あなた<br>
+<img src={{ url_for("static",filename="janken_choki.png") }} alt="ちょき">
+
+<br><br>
+ロボット<br>
+<!--ロボットの手（変数）を書き換える-->
+<!--ロボットの手（変数）によって画像を変える-->
+<!--ロボットの手（変数:1）「ぐう」-->
+{% if robot == 1 %}
+<img src={{ url_for("static",filename="janken_guu.png") }} alt="ぐう">
+<br>
+あなたの負け。<br>
+
+<!--ロボットの手（変数:2）「ちょき」-->
+{% elif robot == 2 %}
+<img src={{ url_for("static",filename="janken_choki.png") }} alt="ちょき">
+<br>
+あいこ。<br>
+
+<!--ロボットの手（変数:3）「ぱあ」-->
+{% elif robot == 3 %}
+<img src={{ url_for("static",filename="janken_paa.png") }} alt="ぱあ">
+<br>
+あなたの勝ち。<br>
+
+
+{% endif %}
+<a href="/">もう一回</a>
+
+</body>
+
+</html>
