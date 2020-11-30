@@ -16,7 +16,7 @@ def guu():
   #ロボットの出す手を決める
   #乱数を使う
   robot = random.randint(1,3)
-
+  
   return render_template("guu.html", robot=robot)
 
 # ルーティングの指定（ちょきのとき）
